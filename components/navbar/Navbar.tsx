@@ -153,7 +153,7 @@ const Navbar:React.FC<NavbarProps> = ({
 
   return (
     <>
-    <header className='padding-x py-8 absolute z-10 w-full'>
+    <header className='padding-x py-8  z-10 w-full'>
       <nav className='flex justify-between items-center max-container'>
         <Link href='/'>
           <Image

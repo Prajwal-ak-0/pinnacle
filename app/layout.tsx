@@ -6,6 +6,7 @@ import getCurrentUser from './actions/getCurrentUser'
 import LoginModal from '@/components/modals/RegisterModal'
 import RegisterModal from '@/components/modals/RegisterModal'
 import ToastProvider from './providers/ToastProvider'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +29,10 @@ export default async function RootLayout({
           <LoginModal/>
           <RegisterModal/>
           <Navbar currentUser={currentUser} />
-        {children}
+            {children}
+          <div className='bg-black text-white padding-x padding-t pb-8'>
+          <Footer/>
+          </div>
       </body>
     </html>
   )
