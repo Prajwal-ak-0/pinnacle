@@ -1,11 +1,20 @@
-import React from 'react'
+"use client";
 
-const page = () => {
+import Image from "next/image";
+
+const Hero = () => {
+  const handleScroll = () => {}
+
   return (
-    <div className=''>
-        
+    <div className="z-10 mt-0 pt-0">
+      <Image
+        src={"/image/hero.jpeg"}
+        alt="Hero Image"
+        width={1920}
+        height={50}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Hero;

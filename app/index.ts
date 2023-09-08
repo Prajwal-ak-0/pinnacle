@@ -4,9 +4,13 @@ import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6
 export const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about-us", label: "About Us" },
-    { href: "#products", label: "Products" },
+    { href: "#buy", label: "Buy" },
+    { href: "#sell", label: "Sell" },
+    { href: "#rent", label: "Rent" },
     { href: "#contact-us", label: "Contact Us" },
-];export const sttistics = [
+];
+
+export const sttistics = [
     { value: '1k+', label: 'Brands' },
     { value: '500+', label: 'Shops' },
     { value: '250k+', label: 'Customers' },
@@ -65,6 +69,27 @@ export const footerLinks = [
             { name: "+92554862354", link: "tel:+92554862354" },
         ],
     },
+];
+
+export const shoes = [
+    {
+        thumbnail: thumbnailShoe1,
+        bigShoe: bigShoe1,
+    },
+    {
+        thumbnail: thumbnailShoe2,
+        bigShoe: bigShoe2,
+    },
+    {
+        thumbnail: thumbnailShoe3,
+        bigShoe: bigShoe3,
+    },
+];
+
+export const statistics = [
+    { value: '1k+', label: 'Brands' },
+    { value: '500+', label: 'Shops' },
+    { value: '250k+', label: 'Customers' },
 ];
 
 export const socialMedia = [

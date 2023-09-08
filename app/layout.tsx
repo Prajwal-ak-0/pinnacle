@@ -30,7 +30,7 @@ export default async function RootLayout({
           <RegisterModal/>
           <Navbar currentUser={currentUser} />
             {children}
-          <div className='bg-black text-white padding-x padding-t pb-8'>
+          <div className='p-8'>
           <Footer/>
           </div>
       </body>
