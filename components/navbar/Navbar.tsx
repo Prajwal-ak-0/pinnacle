@@ -153,7 +153,7 @@ const Navbar:React.FC<NavbarProps> = ({
 
   return (
     <>
-    <header className='padding-x py-8 absolute w-full'>
+    <header className='padding-x md:py-8 py-1 absolute w-full'>
       <nav className='flex justify-between items-center max-container'>
         <Link href='/'>
           <Image
@@ -170,7 +170,7 @@ const Navbar:React.FC<NavbarProps> = ({
             <li key={item.label}>
               <Link
                 href={item.href}
-                className='font-montserrat leading-normal text-lg text-slate-gray'
+                className='font-montserrat leading-normal text-lg'
               >
                 {item.label}
               </Link>
