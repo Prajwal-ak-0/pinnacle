@@ -180,9 +180,9 @@ const Navbar:React.FC<NavbarProps> = ({
         <div 
         onClick={toggleOpen}
         className="
-          p-4
           md:py-1
           md:px-2
+          sm:p-[8px] 
           border-[1px] 
           border-neutral-200 
           flex 
@@ -195,7 +195,7 @@ const Navbar:React.FC<NavbarProps> = ({
           transition
           "
         >
-          <AiOutlineMenu size={25} />
+            <AiOutlineMenu size={25} />
           <div className="hidden md:block">
             <Avatar src={currentUser?.image} />
           </div>
@@ -209,9 +209,12 @@ const Navbar:React.FC<NavbarProps> = ({
             md:w-[200px]
             bg-white 
             overflow-hidden 
-            right-[65px] 
-            top-[81px]
+            md:right-[65px] 
+            md:top-[81px]
             text-sm
+            z-10
+            sm:right-[30px]
+            sm:top-[40px]
           "
         >
           <div className="flex flex-col cursor-pointer">
