@@ -4,6 +4,7 @@ import github from "../public/icons/github.png";
 import { projects } from "../app/index";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt"; // Import from react-parallax-tilt
+import { Button } from "./ui/button";
 
 interface Tag {
   name: string;
@@ -62,7 +63,7 @@ const ProjectCard: React.FC<Project> = ({
             </p>
           ))}
         </div>
-      </div>
+        </div>
       </Tilt>
     </motion.div>
   );

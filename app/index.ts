@@ -1,8 +1,8 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter, } from "../public/icons";
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../public/image";
-import carrent from "@/public/icons/carrent.png"
-import jobit from "@/public/icons/jobit.png"
-import tripguide from "@/public/icons/tripguide.png"
+import prop1 from "../public/Properties/prop1.webp";
+import prop2 from "../public/Properties/prop2.webp";
+import prop3 from "../public/Properties/prop3.webp";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
@@ -104,66 +104,66 @@ export const socialMedia = [
 
 export const projects = [
     {
-      name: "Car Rent",
+      name: "Prestige Elm Park",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Prestige Group has been in the realm of real estate since 1986. Prestige caters to the southern Indian real estate market, covering cities like Bangalore, Mangalore, Kochi, Hyderabad and Goa.",
       tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
+          name: "luxury",
+          color: "text-red-600",
         },
         {
-          name: "mongodb",
-          color: "green-text-gradient",
+          name: "hospitality",
+          color: "text-yellow-600",
         },
         {
-          name: "tailwind",
+          name: "residential",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
+      image: prop2,
       source_code_link: "https://github.com/",
     },
     {
-      name: "Job IT",
+      name: "Buildiko Spring Woods",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Get ready to enjoy the beauty of nature at Buildiko Spring Woods, Bangalore.All the flats and apartments in the Buildiko Spring Woods project are contemporarily designed to offer residents an unmatched lifestyle.",
       tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
+          name: "nature",
+          color: "text-neutral-700",
         },
         {
-          name: "restapi",
-          color: "green-text-gradient",
+          name: "riverside",
+          color: "text-rose-400",
         },
         {
-          name: "scss",
-          color: "pink-text-gradient",
+          name: "woods",
+          color: "text-indigo-400",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: prop1,
+      source_code_link: "",
     },
     {
-      name: "Trip Guide",
+      name: "Brigade Oasis",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Brigade Oasis is a well-planned and strategically located 307 units BHK project located in North Bangalore, Bangalore. The project is spread over acres of landscaped gardens and salubrious environs making living here truly iconic.",
       tags: [
         {
-          name: "nextjs",
-          color: "blue-text-gradient",
+          name: "oasis",
+          color: "text-blue-600",
         },
         {
-          name: "supabase",
-          color: "green-text-gradient",
+          name: "residential",
+          color: "text-neutral-700",
         },
         {
-          name: "css",
-          color: "pink-text-gradient",
+          name: "brigade",
+          color: "text-rose-400",
         },
       ],
-      image: tripguide,
+      image: prop3,
       source_code_link: "https://github.com/",
     },
   ];
