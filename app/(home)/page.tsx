@@ -6,7 +6,7 @@ import Image from "next/image";
 import Card from "@/components/Card";
 import SellModal from "@/components/modals/SellModal";
 import useSellModal from "../hooks/useSellModal";
-
+import Feedback from "@/components/Feedback"
 const Hero = () => {
   const handleScroll = () => {}
   const sellModal=useSellModal();
@@ -42,6 +42,9 @@ const Hero = () => {
     <hr/>
     <div className="container">
        <Card/>
+    </div>
+    <div>
+      <Feedback/>
     </div>
     </>
   );
