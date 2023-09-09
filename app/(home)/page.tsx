@@ -3,7 +3,7 @@
 import {Button} from "@/components/ui/button";
 import Heading from "@/components/Heading";
 import Image from "next/image";
-import { buttonVariants } from "@/components/ui/button"
+import Card from "@/components/Card";
 
 const Hero = () => {
   const handleScroll = () => {}
@@ -20,9 +20,8 @@ const Hero = () => {
     </div>
     <div className="absolute top-0 left-0 w-full h-full flex flex-col md:mt-[150px] mt-[65px] items-center z-10">
       <Heading
+        center
         title="Welcome to Pinnacle Pirate Estates"
-      />
-      <Heading
         subtitle="Your Dream Home Awaits!"
       />
       <div className="flex flex-row item-center justify-evenly ">
@@ -33,6 +32,10 @@ const Hero = () => {
             Sell
         </Button>
       </div>
+    </div>
+    <hr/>
+    <div className="container">
+       <Card/>
     </div>
     </>
   );
