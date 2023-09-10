@@ -6,6 +6,7 @@ import getCurrentUser from './actions/getCurrentUser'
 import LoginModal from '@/components/modals/RegisterModal'
 import RegisterModal from '@/components/modals/RegisterModal'
 import ToastProvider from './providers/ToastProvider'
+import Testimonials from '@/components/Testimonials'
 import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,14 +26,21 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div className="relative z-0 ">
+          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <ToastProvider/>
           <LoginModal/>
           <RegisterModal/>
           <Navbar currentUser={currentUser} />
             {children}
           <div className='p-8'>
-          <Footer/>
+          <Testimonials/>
           </div>
+          <div className="p-8">
+            <Footer/>
+          </div>
+          </div>
+        </div>
       </body>
     </html>
   )

@@ -1,71 +1,102 @@
-"use client"
+import Image from "next/image";
 
-import Image from "next/image"
-
-const Middle = () => {
+const Feedback = () => {
   return (
-
-    <div className="text-center" style={{maxWidth:'980px',margin:'0 auto',boxSizing:'border-box',display:'block',paddingTop:'50px',paddingBottom:'50px'}}>
-    <h2 style={{color:'#1c1c1c',fontSize:'24px',fontWeight:'400',lineHeight:'1.25'}}>
-      How are
-      <strong style={{fontWeight:'600',boxSizing:'border-box',paddingLeft:'5px'}}>sellers rated</strong>
-    </h2>
-          <p className="subtitle" style={{margin:'0',padding:'10px 0 20px',color:'#999',fontSize:'16px',textAlign:'center'}}>
-            We pick the best sellers for you who are best in class in various aspects
-          </p>
-          <div className="container" style={{margin:'60px 0 20px',textAlign:'center',boxSizing:'border-box',display:'block'}}>
-            <div className="img-center-wrapper" style={{position:'relative',boxSizing:'border-box',display:'block'}}>
-              <div style={{position:'relative',display:'inline-block',width:'100px',height:'120px',margin:'0 auto',textAlign:'center'}}>
-                <Image alt="makan" src="/image/man.png" width={50} height={50} style={{width:'100%',maxHeight:'100%',border:'0',verticalAlign:'middle'}}/>
-                <Image alt="makan1" src="/image/man2.png" width={50} height={50} style={{left:'0',opacity:'0',verticalAlign:'middle',animationName:'imgchange',animationTimingFunction:'ease-in-out',animationIterationCount:'infinite',animationDuration:'7s',animationDirection:'alternate',width:'100%',maxHeight:'100%'}}/>
-              </div>
-              <div style={{top:'0',left:'0',textAlign:'right',position:'absolute',width:'200px'}}>
-                <h3 style={{fontSize:'18px',margin:'0',padding:'0',fontWeight:'400',lineHeight:'1'}}>
-                 High Respone Rate
-                 </h3>
-                 <div className="text" style={{fontSize:'10px'}}>
-                  We pick sellers for you who give you priority.over 90%of our top sellers
-                  respond to enqueries within the first 24 hours!
-                </div>
-                
-                </div>
-    
-                <div style={{top:'0',left:'0',textAlign:'right',position:'absolute',width:'200px',paddingTop:'100px'}}>
-                <h3 style={{fontSize:'18px',margin:'0',padding:'0',fontWeight:'400',lineHeight:'1'}}>
-                 Wide Coverage
-                 </h3>
-                 <div className="text" style={{fontSize:'10px'}}>
-                  Sellers with wide variety ofproperties are more likely to satisfy your demands.More the opttions,
-                  better is your decision.
-                </div>
-                </div>
-    
-                <div style={{top:'0',right:'0',textAlign:'left',position:'absolute',width:'200px'}}>
-                <h3 style={{fontSize:'18px',margin:'0',padding:'0',fontWeight:'400',lineHeight:'1'}}>
-                 Deals Closed
-                 </h3>
-                 <div className="text" style={{fontSize:'10px'}}>
-                 We choose the sellers who have previously closed the deals with similar requirements as you have.They will
-                 understand your needs better.
-                </div>
-                
-                </div>
-    
-                <div style={{top:'0',right:'0',textAlign:'left',position:'absolute',width:'200px',paddingTop:'100px'}}>
-                <h3 style={{fontSize:'18px',margin:'0',padding:'0',fontWeight:'400',lineHeight:'1'}}>
-                 Rated & Reviewed
-                 </h3>
-                 <div className="text" style={{fontSize:'10px'}}>
-                Tesimols from geninue buyers are the best way to jusgr a seller .Better the ratings,better will be experience.
-                </div>
-                
-                </div>
-            </div>
+    <div className="text-center max-w-6xl  mx-auto box-border  py-12">
+      <h2 className="text-gray-700 text-3xl font-normal">
+        How are
+        <strong className="font-semibold pl-1">sellers rated</strong>
+      </h2>
+      <p className="subtitle mt-4 text-gray-500 text-lg text-center">
+        We pick the best sellers for you who are best in class in various aspects
+      </p>
+      <div className="sm:container sm:mt-16 sm:text-center sm:box-border sm:flex sm:flex-row sm:justify-evenly hidden">
+        <div>
+        <div className=" sm:top-0 sm:left-0 sm:block sm:text-right sm:w-48 hidden md:w-[350px] ">
+          <h3 className="text-xl md:text-2xl  font-normal">
+            High Response Rate
+          </h3>
+          <div className="text-sm md:text-sm">
+            We pick sellers for you who give you priority. Over 90% of our top sellers respond to inquiries within the first 24 hours!
           </div>
         </div>
 
-  )
+        <div className="sm:top-0 sm:block sm:left-0  sm:text-right sm:w-48 sm:pt-[100px] hidden md:w-[350px] ">
+          <h3 className="text-xl font-normal md:text-2xl ">
+            Wide Coverage
+          </h3>
+          <div className="text-xs md:text-sm">
+            Sellers with a wide variety of properties are more likely to satisfy your demands. More options mean better decision-making.
+          </div>
+        </div>
+        </div>
 
+        <div className="flex flex-col gap-2 p-2 md:w-32 md:h-72 w-32 h-36 mx-auto my-auto ">
+          <Image
+            alt="makan"
+            src="/footer/man1.png"
+            width={250}
+            height={250}
+            className="w-full sm:block hidden h-full object-cover"
+          />
+          <Image
+            alt="makan1"
+            src="/footer/man2.png"
+            width={250}
+            height={250}
+            className=" top-0 left-0 w-full h-full object-cover animate-imgchange"
+          />
+        </div>
+        <div>
 
-}
-export default Middle
+        <div className="top-0 right-0 text-left  sm:w-48 md:w-[350px]">
+          <h3 className="text-xl font-normal md:text-2xl ">
+            Deals Closed
+          </h3>
+          <div className="text-xs md:text-sm">
+            We choose the sellers who have previously closed deals with similar requirements as yours. They will understand your needs better.
+          </div>
+        </div>
+
+        <div className="top-0 right-0 text-left mt-[100px] w-48 md:w-[350px]">
+          <h3 className="text-xl font-normal md:text-2xl ">
+            Rated & Reviewed
+          </h3>
+          <div className="text-xs md:text-sm">
+            Testimonials from genuine buyers are the best way to judge a seller. Better ratings lead to a better experience.
+          </div>
+        </div>
+        </div>
+      </div>
+      <div className="sm:hidden mt-8">
+        <div className="flex flex-col gap-2 p-2 md:w-32 md:h-72 w-32 h-36 mx-auto my-auto ">
+          <Image
+            alt="makan1"
+            src="/footer/man2.png"
+            width={250}
+            height={250}
+            className=" top-0 left-0 w-full h-full object-cover animate-imgchange"
+          />
+        </div>
+        <div className="text-center">
+          <h3 className="text-xl font-normal md:text-2xl ">
+            High Response Rate
+          </h3>
+          <div className="text-xs px-16 py-2 md:text-sm ">
+            We pick sellers for you who give you priority. Over 90% of our top sellers respond to inquiries within the first 24 hours!
+          </div>
+        </div>
+        <div className="text-center mt-4">
+          <h3 className="text-xl font-normal md:text-2xl ">
+            Rated & Reviewed
+          </h3>
+          <div className="text-xs px-16 py-2 md:text-sm">
+            Testimonials from genuine buyers are the best way to judge a seller. Better ratings lead to a better experience.
+          </div>
+        </div>
+    </div>
+    </div>
+  );
+};
+
+export default Feedback;

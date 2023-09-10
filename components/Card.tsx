@@ -37,7 +37,7 @@ const ProjectCard: React.FC<Project> = ({
           glareColor="#ffffff"
           scale={1.02}
         >
-          <div className="bg-sky-100 p-5 rounded-2xl md:w-[360px] w-full">
+          <div className="bg-indigo-300 p-5 rounded-2xl md:w-[360px] w-full">
           <div className="relative w-full h-[230px]">
             <Image src={image} alt={name} className="w-full h-full object-cover rounded-2xl" />
             <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
