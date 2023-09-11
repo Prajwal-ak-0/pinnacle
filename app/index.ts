@@ -1,5 +1,4 @@
-import { facebook, instagram, shieldTick, support, truckFast, twitter, } from "../public/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../public/image";
+import { facebook, instagram, twitter, } from "../public/icons";
 import prop1 from "../public/Properties/prop1.webp";
 import prop2 from "../public/Properties/prop2.webp";
 import prop3 from "../public/Properties/prop3.webp";
@@ -13,47 +12,17 @@ export const navLinks = [
     { href: "#contact-us", label: "Contact Us" },
 ];
 
-export const sttistics = [
-    { value: '1k+', label: 'Brands' },
-    { value: '500+', label: 'Shops' },
-    { value: '250k+', label: 'Customers' },
-];
-
-export const services = [
-    {
-        imgURL: truckFast,
-        label: "Free shipping",
-        subtext: "Enjoy seamless shopping with our complimentary shipping service."
-    },
-    {
-        imgURL: shieldTick,
-        label: "Secure Payment",
-        subtext: "Experience worry-free transactions with our secure payment options."
-    },
-    {
-        imgURL: support,
-        label: "Love to help you",
-        subtext: "Our dedicated team is here to assist you every step of the way."
-    },
-];
-
-export const reviews = [
-    {
-        imgURL: customer1,
-        customerName: 'Morich Brown',
-        rating: 4.5,
-        feedback: "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!"
-    },
-    {
-        imgURL: customer2,
-        customerName: 'Lota Mongeskar',
-        rating: 4.5,
-        feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
-    }
-];
-
-
 export const footerLinks = [
+  {
+    title: "Partner Sites",
+    links: [
+        { name: "Proptiger", link: "/" },
+        { name: "Makkan", link: "/" },
+        { name: "realestate.com.au", link: "/" },
+        { name: "realtor.com", link: "/" },
+        { name: "99.c0", link: "/" },
+    ],
+},
     
     {
         title: "Help",
@@ -72,27 +41,6 @@ export const footerLinks = [
             { name: "+92554862354", link: "tel:+92554862354" },
         ],
     },
-];
-
-export const shoes = [
-    {
-        thumbnail: thumbnailShoe1,
-        bigShoe: bigShoe1,
-    },
-    {
-        thumbnail: thumbnailShoe2,
-        bigShoe: bigShoe2,
-    },
-    {
-        thumbnail: thumbnailShoe3,
-        bigShoe: bigShoe3,
-    },
-];
-
-export const statistics = [
-    { value: '1k+', label: 'Brands' },
-    { value: '500+', label: 'Shops' },
-    { value: '250k+', label: 'Customers' },
 ];
 
 export const socialMedia = [

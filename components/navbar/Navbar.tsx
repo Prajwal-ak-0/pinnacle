@@ -20,6 +20,8 @@ import {useRouter} from "next/navigation"
 import { navLinks } from '@/app';
 import Avatar from '../Avatar';
 import MenuItem from './MenuItem';
+import SellModal from '../modals/SellModal';
+import useSellModal from '@/app/hooks/useSellModal';
 
 
 interface NavbarProps{
@@ -33,6 +35,7 @@ const Navbar:React.FC<NavbarProps> = ({
   const registerModal=useRegisterModal();
   const loginModal=useLoginModal();
   const [isOpen,setIsOpen]=useState(false);
+  const sellModal=useSellModal();
 
   const router=useRouter();
 
@@ -155,14 +158,14 @@ const Navbar:React.FC<NavbarProps> = ({
     <>
     <header className='padding-x md:py-8 py-1 absolute w-full'>
       <nav className='flex justify-between items-center max-container'>
-        <Link href='/'>
+        <Link href='/' className=''>
           <Image
             priority
-            src="images/logo.svg"
+            src="/logo2.png"
             alt='logo'
             width={129}
             height={29}
-            className='m-0 w-[129px] h-[29px]'
+            className='sm:m-0 sm:ml-8 sm:block hidden sm:w-[129px] sm:h-[50px]'
           />
         </Link>
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
@@ -184,6 +187,7 @@ const Navbar:React.FC<NavbarProps> = ({
           md:px-2
           sm:p-[8px] 
           border-[1px] 
+          p-2
           border-neutral-200 
           flex 
           flex-row 
@@ -215,6 +219,8 @@ const Navbar:React.FC<NavbarProps> = ({
             z-10
             sm:right-[30px]
             sm:top-[40px]
+            right-[10px]
+            top-[45px]
           "
         >
           <div className="flex flex-col cursor-pointer">
@@ -225,6 +231,14 @@ const Navbar:React.FC<NavbarProps> = ({
                   onClick={() => signOut()}
                 />
                 <hr />
+                <MenuItem 
+                  label="Buy" 
+                  onClick={() => {}}
+                />
+                <MenuItem
+                  label="Sell"
+                  onClick={() => sellModal.onOpen()}  
+                />
               </>
             ) : (
               <>
