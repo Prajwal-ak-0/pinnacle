@@ -119,26 +119,26 @@ export const projects = [
   export const testimonials = [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+        "I had a fantastic experience working with your team at Pinnacle Realty. Thanks to Pinnacle Realty, I found the perfect home for my family. Highly recommended!",
       name: "Sara Lee",
       designation: "CFO",
       company: "Acme Co",
-      image: '/image1.avif',
+      image: '/image1.jpg',
     },
     {
       testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
+        "Working with Pinnacle Realty was a breeze. From the moment I contacted them, I knew I was in good hands. Their expertise in the local real estate market was evident, and their negotiation skills were impressive.",
       name: "Chris Brown",
       designation: "COO",
       company: "DEF Corp",
-      image: '/image2.avif',
+      image: '/image2.jpg',
     },
     {
       testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+        "I cannot express how thankful I am for the outstanding service provided by this real estate agency. They understood my unique needs and preferences, ensuring that I found a home that matched my lifestyle perfectly.",
       name: "Lisa Wang",
       designation: "CTO",
       company: "456 Enterprises",
-      image:'/image3.avif' ,
+      image:'/image3.jpg' ,
     },
   ];

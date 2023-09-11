@@ -18,7 +18,7 @@ const Feedback = () => {
           <h3 className="text-xl md:text-2xl  font-normal">
             High Response Rate
           </h3>
-          <div className="text-sm md:text-sm">
+          <div className="text-sm md:text-sm lg:my-8 m-4">
             We pick sellers for you who give you priority. Over 90% of our top sellers respond to inquiries within the first 24 hours!
           </div>
         </div>
