@@ -9,7 +9,7 @@ const Feedback = () => {
         How are
         <strong className="font-semibold pl-1">sellers rated</strong>
       </h2>
-      <p className="subtitle mt-4 text-gray-500 text-lg text-center">
+      <p className="subtitle mt-4 text-gray-500 text-lg text-center mx-6">
         We pick the best sellers for you who are best in class in various aspects
       </p>
       <div className="sm:container sm:mt-16 sm:text-center sm:box-border sm:flex sm:flex-row sm:justify-evenly hidden">
