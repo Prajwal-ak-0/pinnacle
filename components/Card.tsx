@@ -70,7 +70,7 @@ const ProjectCard: React.FC<Project> = ({
             <div className="ml-[256px] md:ml-[150px]  my-auto">
               <LinkButton
                 title="View"
-                href="project"
+                href="/"
               />
             </div>
           </div>

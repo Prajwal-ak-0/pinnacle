@@ -1,96 +1,31 @@
 import prisma from "@/app/lib/prismadb";
 
-export interface IListingsParams {
+interface PropertParams {
   userId?: string;
-  guestCount?: number;
-  roomCount?: number;
-  bathroomCount?: number;
-  startDate?: string;
-  endDate?: string;
-  locationValue?: string;
-  category?: string;
 }
 
-export default async function getListings(
-  params: IListingsParams
-) {
+export default async function getProperties({
+  userId,
+}: PropertParams){
+
   try {
-    const {
-      userId,
-      roomCount, 
-      guestCount, 
-      bathroomCount, 
-      locationValue,
-      startDate,
-      endDate,
-      category,
-    } = params;
+    if(!userId) throw new Error("User id is required");
 
-    let query: any = {};
-
-    if (userId) {
-      query.userId = userId;
-    }
-
-    if (category) {
-      query.category = category;
-    }
-
-    if (roomCount) {
-      query.roomCount = {
-        gte: +roomCount
-      }
-    }
-
-    if (guestCount) {
-      query.guestCount = {
-        gte: +guestCount
-      }
-    }
-
-    if (bathroomCount) {
-      query.bathroomCount = {
-        gte: +bathroomCount
-      }
-    }
-
-    if (locationValue) {
-      query.locationValue = locationValue;
-    }
-
-    if (startDate && endDate) {
-      query.NOT = {
-        reservations: {
-          some: {
-            OR: [
-              {
-                endDate: { gte: startDate },
-                startDate: { lte: startDate }
-              },
-              {
-                startDate: { lte: endDate },
-                endDate: { gte: endDate }
-              }
-            ]
-          }
-        }
-      }
-    }
-
-    const listings = await prisma.listing.findMany({
-      where: query,
-      orderBy: {
-        createdAt: 'desc'
-      }
+    const properties = await prisma.listing.findMany({
+      where: {
+        userId,
+      },
     });
 
-    const safeListings = listings.map((listing) => ({
-      ...listing,
-      createdAt: listing.createdAt.toISOString(),
+    const safeProperties = properties.map((property) => ({
+      ...property,
+      createdAt:property.createdAt.toISOString(),
     }));
 
-    return safeListings;
-  } catch (error: any) {
-    throw new Error(error);
+    return safeProperties;
+    
+  } catch (error:any) {
+    console.log(error);
+    throw new Error("Error al obtener las propiedades");
   }
 }

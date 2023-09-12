@@ -9,6 +9,7 @@ import SellModal from './modals/SellModal'
 import { SafeUser } from '@/app/types'
 import toast from 'react-hot-toast'
 import useLoginModal from '@/app/hooks/useLoginModal'
+import { useRouter } from 'next/navigation';
 
 interface HeroProps {
     currentUser?: SafeUser | null;
@@ -20,9 +21,7 @@ const Hero:React.FC<HeroProps> = ({
     const sellModal = useSellModal()
     const loginModal=useLoginModal();
 
-    const rent = () => {
-    
-    }
+    const router=useRouter();
 
     const sell = () => {
         if(currentUser){
@@ -50,7 +49,7 @@ const Hero:React.FC<HeroProps> = ({
         subtitle="Your Dream Home Awaits!"
       />
       <div className="flex flex-row item-center justify-evenly ">
-        <Button className="mx-4" onClick={rent}>
+        <Button className="mx-4" onClick={() => router.push("properties")}>
             Buy
         </Button>
         <Button onClick={sell}>
