@@ -3,6 +3,7 @@ import etProperties from '@/app/actions/getProperties';
 import GetProperties from '@/app/(home)/properties/components/GetProperties';
 import React from 'react'
 import axios from 'axios';
+import HeroHeading from '@/components/HeroHeading';
 
 const page =async () => {
     // const currentUser=await getCurrentUser();
@@ -13,7 +14,9 @@ const page =async () => {
   return (
 
     <div className='container items-center pt-16 md:pt-32'>
-        Displaying the listed properties
+        <h1>
+          Properties for Sale
+        </h1>
         <div>
           <GetProperties/>
         </div>
