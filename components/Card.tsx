@@ -6,8 +6,8 @@ import github from "../public/icons/github.png";
 import { projects } from "../app/index";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt"; // Import from react-parallax-tilt
-import {Button}  from "./ui/button";
 import LinkButton from "./LinkButton";
+import { useRouter } from "next/navigation";
 
 interface Tag {
   name: string;
@@ -31,6 +31,9 @@ const ProjectCard: React.FC<Project> = ({
   image,
   source_code_link,
 }) => {
+
+  const router=useRouter();
+
   return (
     <motion.div>
       
@@ -70,7 +73,7 @@ const ProjectCard: React.FC<Project> = ({
             <div className="ml-[256px] md:ml-[150px]  my-auto">
               <LinkButton
                 title="View"
-                href="/"
+                index={index}
               />
             </div>
           </div>
@@ -83,7 +86,7 @@ const ProjectCard: React.FC<Project> = ({
 const Works: React.FC = () => {
   return (
     <>
-      <div className="mt-5">
+      <div className="mt-5 ml-4">
         <h2 className="text-neutral-900 font-black md:text-[45px] sm:text-[27px] xs:text-[25px] text-[25px]">
           Explore Our Premier Properties
         </h2>
@@ -92,7 +95,7 @@ const Works: React.FC = () => {
         </h2>
       </div>
 
-      <div className="mt-10 flex flex-wrap justify-evenly gap-10">
+      <div className="mt-10 mx-8 flex flex-wrap justify-evenly gap-10">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

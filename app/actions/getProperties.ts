@@ -26,6 +26,5 @@ export default async function getProperties({
     
   } catch (error:any) {
     console.log(error);
-    throw new Error("Error al obtener las propiedades");
   }
 }
