@@ -1,5 +1,5 @@
 
-import Card from "@/components/Card";
+import Card from "@/components/BestSellerCard";
 import Feedback from "@/components/Feedback"
 import Hero from "@/components/Hero";
 import getCurrentUser from "../actions/getCurrentUser";
