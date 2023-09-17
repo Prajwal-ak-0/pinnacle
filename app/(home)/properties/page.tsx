@@ -1,25 +1,21 @@
 import getCurrentUser from '@/app/actions/getCurrentUser';
-import getProperties from '@/app/actions/getProperties';
+import etProperties from '@/app/actions/getProperties';
+import GetProperties from '@/app/(home)/properties/components/GetProperties';
 import React from 'react'
-import PropertyPage from './components/PropertyPage';
-import { create } from 'domain';
+import axios from 'axios';
 
 const page =async () => {
-    const currentUser=await getCurrentUser();
-    const userId=currentUser?.id || "";
+    // const currentUser=await getCurrentUser();
+    // const userId=currentUser?.id || "";
 
-    const properties=await getProperties({userId});
-
-    console.log(currentUser)
-    console.log(properties)
-
+    // const properties=await getProperties({userId})
 
   return (
 
-    <div className='container items-center'>
+    <div className='container items-center pt-16 md:pt-32'>
         Displaying the listed properties
         <div>
-          <PropertyPage properties={properties} />
+          <GetProperties/>
         </div>
     </div>
   )
