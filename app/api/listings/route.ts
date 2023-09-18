@@ -36,9 +36,9 @@ export async function POST(
         description,
         imageSrc,
         category,
-        minPrice:parseInt(minPrice, 10),
-        maxPrice:parseInt(maxPrice,10),
-        area:parseInt(area, 10),
+        minPrice,
+        maxPrice,
+        area,
         place,
         userId: currentUser.id
     }

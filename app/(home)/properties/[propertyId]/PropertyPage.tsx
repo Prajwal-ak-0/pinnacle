@@ -29,24 +29,43 @@ interface IParams {
   propertyId?: string;
 }
 
-const PropertyPage: React.FC<IParams> = ({ propertyId }) => {
-  const [property, setProperty] = useState([]);
+interface Property {
+  id: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  place: string;
+  area: string;
+  minPrice: string;
+  maxPrice: string;
+  category: string;
+  userId: string;
+}
+
+const PropertyPage = ({ params }: { params: IParams }) => {
+  const [property, setProperty] = useState<Property[] | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get(`/api/properties/${propertyId}`);
-        console.log(result.data);
-        setProperty(result.data);
+        if (params.propertyId) {
+          const result = await axios.get(`/api/properties/${params.propertyId}`);
+          console.log(result.data);
+          setProperty(result.data);
+        }
       } catch (error) {
         console.error("Error fetching property:", error);
       }
     };
     fetchData();
-  }, [propertyId]);
+  }, [params.propertyId]);
 
   const booked = () => toast.success("Booked Successfully");
 
+  if (!property) {
+    // Property data is still being fetched
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <div
@@ -61,7 +80,7 @@ const PropertyPage: React.FC<IParams> = ({ propertyId }) => {
       >
         <Image
           alt="Image"
-          src={properties[0].image}
+          src={property[0].imageSrc}
           width={850}
           height={500}
           className="object-cover rounded-xl"
@@ -69,11 +88,11 @@ const PropertyPage: React.FC<IParams> = ({ propertyId }) => {
         <div className="mx-auto flex-1 md:ml-4 md:mr-16 md:mt-0 mt-4 w-full">
           <Card>
             <CardHeader>
-              <CardTitle>{properties[0].title}</CardTitle>
+              <CardTitle>{property[0].title}</CardTitle>
               <CardDescription>
                 <div className="flex flex-row">
                   <MdLocationOn />
-                  <p>{properties[0].location}</p>
+                  <p>{property[0].place}</p>
                 </div>
               </CardDescription>
             </CardHeader>
@@ -92,19 +111,19 @@ const PropertyPage: React.FC<IParams> = ({ propertyId }) => {
                       <TableCell className="text-md font-semibold">
                         Price
                       </TableCell>
-                      <TableCell>{properties[0].price}</TableCell>
+                      <TableCell>{property[0].minPrice}</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="text-md font-semibold">
                         Area
                       </TableCell>
-                      <TableCell>{properties[0].size}</TableCell>
+                      <TableCell>{property[0].area}</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="text-md font-semibold">
                         Configuration
                       </TableCell>
-                      <TableCell>{properties[0].Configurations}</TableCell>
+                      <TableCell> 3BHK - 4BHK</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="text-md font-semibold">
@@ -124,7 +143,7 @@ const PropertyPage: React.FC<IParams> = ({ propertyId }) => {
       </div>
 
       <div className="ml-4 mt-8">
-        <Heading title="About Prestige Elm Park" />
+        <Heading title="About our Property" />
       </div>
 
       <div className="mx-auto flex-1 md:ml-4 md:mr-16 md:mt-0 mt-4">
@@ -132,7 +151,7 @@ const PropertyPage: React.FC<IParams> = ({ propertyId }) => {
         <Card>
           <CardContent>
             <p className="text-sm md:text-md p-4 tracking-wide leading-6 pt-8 text-justify">
-              {properties[0].info}
+              {property[0].description}
             </p>
             <div className="ml-4 mt-6 flex flex-row ">
               <Badge variant="destructive" className="mr-4">

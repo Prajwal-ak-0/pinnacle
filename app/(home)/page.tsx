@@ -3,15 +3,15 @@ import Card from "@/components/BestSellerCard";
 import Feedback from "@/components/Feedback"
 import Hero from "@/components/Hero";
 import getCurrentUser from "../actions/getCurrentUser";
-import getProperties from "../actions/getProperties";
 import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
 
 const page =async () => {
 
     const currentUser=await getCurrentUser();
+    console.log(currentUser)
 
     const userId=currentUser?.id || "";
-    const properties=await getProperties({userId});
 
   return (
     <>
@@ -22,6 +22,7 @@ const page =async () => {
       <Testimonials/>
     </div>
     <Feedback/>
+    <Footer/>
     </>
   );
 };

@@ -94,10 +94,7 @@ const Info:React.FC<InfoProps> = ({index=0}) => {
                         <Button label='Book Now' onClick={booked}/>
                     </CardFooter>
                 </Card>
-            </div>
-
-            
-                
+            </div>  
         </div>
 
         <div className='ml-4 mt-8'>

@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import HeartButton from './HeartButton';
+import { MdLocationOn } from 'react-icons/md';
+import Avatar from '@/components/Avatar';
 
 // Define the type for a single property
 interface Property {
@@ -12,9 +14,9 @@ interface Property {
   description: string;
   imageSrc: string;
   place: string;
-  area: number;
-  minPrice: number;
-  maxPrice: number;
+  area: string;
+  minPrice: string;
+  maxPrice: string;
   category: string;
   user: {
     id: string;
@@ -34,14 +36,14 @@ const Properties: React.FC<PropertiesProps> = ({ properties }) => {
   const router = useRouter();
   return (
     <div className='
-    pt-24
+    pt-8
     grid
-    grid-cols-1
+    w-[90%]
+    mx-auto
+    h-[90vh]
     sm:grid-cols-2
     md:grid-cols-3
-    lg:gris-cols-4
-    xl:grid-cols-5
-    2xl:grid-cols-6
+    xl:grid-cols-4
     gap-8
     '>
       {properties.map((property) => (
@@ -81,10 +83,20 @@ const Properties: React.FC<PropertiesProps> = ({ properties }) => {
                 </div>
             </div>
 
-            <div className="fontsemibold text-lg">
-                {property?.place} 
+            <div className='flex'>
+                <Avatar src={property.user.image} />
+
+                <p className="flex-1 ml-4 mt-1 font-medium">
+                    {property.user.name}
+                </p>
             </div>
-            <div className="flex flex-col items-center gap-1">
+
+            <div className="fontsemibold text-lg">
+                <div className='flex flex-row'>
+                <span className='mt-1'><MdLocationOn /></span> {property?.place} 
+                </div>
+            </div>
+            <div className="flex flex-col md:items-center gap-1">
                 <div className="font-semibold">
                     $ {property?.minPrice}
                 </div>

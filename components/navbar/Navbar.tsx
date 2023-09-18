@@ -4,7 +4,7 @@
 import { SafeUser } from '@/app/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiFillGithub, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import {FcGoogle} from "react-icons/fc"
 import { FieldValues,SubmitHandler,useForm } from "react-hook-form";
 import { useCallback,useState } from "react";
@@ -20,7 +20,6 @@ import {useRouter} from "next/navigation"
 import { navLinks } from '@/app';
 import Avatar from '../Avatar';
 import MenuItem from './MenuItem';
-import SellModal from '../modals/SellModal';
 import useSellModal from '@/app/hooks/useSellModal';
 
 

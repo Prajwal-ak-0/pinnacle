@@ -45,9 +45,9 @@ const SellModal = () => {
           description:'',
           imageSrc:'',
           category:'',
-          minPrice:1,
-          maxPrice:1,
-          area:1,
+          minPrice:'',
+          maxPrice:'',
+          area:'',
           place:'',
       },
     })
@@ -99,9 +99,6 @@ const SellModal = () => {
     }
 
     const category=watch('category');
-    const minPrice=watch('minPrice')
-    const maxPrice=watch('maxPrice')
-    const area=watch('area')
     const imageSrc=watch('imageSrc');
 
 
@@ -227,8 +224,6 @@ const SellModal = () => {
           <Input
             id="area"
             label="Area in Sq feet"
-            formatPrice
-            type="number"
             disabled={isLoading}
             register={register}
             errors={errors}
@@ -248,8 +243,6 @@ const SellModal = () => {
           <Input
             id="price"
             label="Min Price"
-            formatPrice
-            type="number"
             disabled={isLoading}
             register={register}
             errors={errors}
@@ -258,8 +251,6 @@ const SellModal = () => {
           <Input
             id="price"
             label="Max Price"
-            formatPrice
-            type="number"
             disabled={isLoading}
             register={register}
             errors={errors}

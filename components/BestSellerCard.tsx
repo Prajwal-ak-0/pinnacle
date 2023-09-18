@@ -42,8 +42,8 @@ const ProjectCard: React.FC<Project> = ({
           glareMaxOpacity={0.75}
           scale={1.02}
         >
-          <div className="bg-indigo-300 p-5 rounded-2xl md:w-[360px] w-full">
-          <div className="relative w-full h-[230px]">
+          <div className="bg-indigo-300 p-4 rounded-2xl lg:w-[400px] w-[360px]"> 
+          <div className="relative w-full h-[250px]">
             <Image src={image} alt={name} className="w-full h-full  rounded-2xl" />
             <div className="absolute inset-0 flex justify-end m-3 ">
               <div
@@ -70,7 +70,7 @@ const ProjectCard: React.FC<Project> = ({
                 </p>
               ))}
             </div>
-            <div className="ml-[256px] md:ml-[150px]  my-auto">
+            <div className="ml-[256px] md:block hidden md:ml-[150px]  my-auto">
               <LinkButton
                 title="View"
                 index={index}
@@ -95,7 +95,7 @@ const Works: React.FC = () => {
         </h2>
       </div>
 
-      <div className="mt-10 mx-8 flex flex-wrap justify-evenly gap-10">
+      <div className="mt-10 md:mx-8 flex flex-wrap justify-evenly md:gap-10 gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

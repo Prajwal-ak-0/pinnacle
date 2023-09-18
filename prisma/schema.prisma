@@ -53,9 +53,9 @@ model Listing {
   imageSrc String
   createdAt DateTime @default(now())
   category  String
-  minPrice Int
-  maxPrice Int
-  area Int
+  minPrice String
+  maxPrice String
+  area String
   place String
   userId String @db.ObjectId
 

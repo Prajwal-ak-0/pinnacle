@@ -5,11 +5,12 @@ interface IParams{
     propertyId?: string;
 }
 
-const page =async ({params}:{params:IParams}) => {
+const page =({params}:{params:IParams}) => {
+
 
   return (
     <div className='pt-16 md:pt-32'>
-      <PropertyPage propertyId={params.propertyId}/>
+      <PropertyPage params={params}/>
     </div>
   )
 }

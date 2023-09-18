@@ -4,11 +4,10 @@ import prop2 from "../public/Properties/prop2.webp";
 import prop3 from "../public/Properties/prop3.webp";
 
 export const navLinks = [
-    { href: "#home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "#about-us", label: "About Us" },
-    { href: "#buy", label: "Buy" },
-    { href: "#sell", label: "Sell" },
-    { href: "#rent", label: "Rent" },
+    { href: "/properties", label: "Buy" },
+    { href: "#/sell", label: "Sell" },
     { href: "#contact-us", label: "Contact Us" },
 ];
 
