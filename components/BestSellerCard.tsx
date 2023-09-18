@@ -86,7 +86,7 @@ const ProjectCard: React.FC<Project> = ({
 const Works: React.FC = () => {
   return (
     <>
-      <div className="mt-5 ml-4">
+      <div className="mt-5 sm:ml-4 ml-2">
         <h2 className="text-neutral-900 font-black md:text-[45px] sm:text-[27px] xs:text-[25px] text-[25px]">
           Explore Our Premier Properties
         </h2>
@@ -95,7 +95,7 @@ const Works: React.FC = () => {
         </h2>
       </div>
 
-      <div className="mt-10 md:mx-8 flex flex-wrap justify-evenly md:gap-10 gap-8">
+      <div className="mt-10 md:mx-8 item-center ml-6 flex flex-wrap sm:justify-evenly md:gap-10 gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

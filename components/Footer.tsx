@@ -5,8 +5,8 @@ import { footerLinks, socialMedia } from "../app/index";
 const Footer = () => {
   return (
     <footer className='max-container rounded-md bg-indigo-200 '>
-      <div className='flex justify-between items-start gap-20 flex-wrap max-lg:flex-col'>
-        <div className='flex flex-col sm:items-start items-center'>
+      <div className='flex justify-between items-start md:gap-20 gap-10 flex-wrap max-lg:flex-col'>
+        <div className='flex flex-col md:items-start mx-auto items-center'>
           <a href='/'>
             <Image
               src='/logo2.png'
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap md:mt-20 mt-6 mx-4'>
+        <div className='flex flex-1 justify-between lg:gap-10 gap-20  flex-wrap md:mt-20 -mt-6 mx-4'>
           {footerLinks.map((section) => (
             <div key={section.title}>
               <h4 className='font-montserrat text-2xl leading-normal font-medium sm:mb-6 mb-2 text-white'>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='flex items-center mt-12 pb-8 flex-col'>
+      <div className='flex items-center sm:mt-12 mt-8 pb-8 flex-col'>
         <div className='flex gap-2 font-montserrat cursor-pointer'>
           <Image
             src={copyrightSign}

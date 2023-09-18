@@ -42,7 +42,7 @@ const Hero:React.FC<HeroProps> = ({
         height={50}
       />
     </div>
-    <div className="absolute top-0 left-0 w-full h-full flex flex-col sm:mt-[75px]  lg:mt-[150px] md:mt-[100px] mt-[35px] sm:[mt-65px] items-center z-3">
+    <div className="absolute sm:top-0 -top-4 left-0 w-full h-full flex flex-col sm:mt-[75px]  lg:mt-[150px] md:mt-[100px] mt-[35px] sm:[mt-50px] items-center z-3">
       <HeroHeading
         center
         title="Welcome to Pinnacle Park Estates"
