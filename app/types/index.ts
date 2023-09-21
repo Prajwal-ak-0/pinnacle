@@ -10,5 +10,5 @@ export type SafeUser = Omit<
 };
 
 export type SafeListing=Omit<Listing,"createdAt">&{
-  createdAt:string
+  createdAt:string;
 }
